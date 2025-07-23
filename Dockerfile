@@ -1,5 +1,5 @@
-FROM nicoulaj/focalboard:latest
+FROM mattermost/focalboard
 
 EXPOSE 8000
 
-CMD ["focalboard"]
+CMD ["./focalboard-server", "--config", "./config.json"]
