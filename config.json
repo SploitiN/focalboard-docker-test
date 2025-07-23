@@ -1,7 +1,12 @@
-FROM nicoulaj/focalboard:latest
-
-COPY config.json /app/config.json
-
-EXPOSE 8000
-
-CMD ["focalboard", "--config", "/app/config.json"]
+{
+  "server": {
+    "port": 8000,
+    "address": "0.0.0.0"
+  },
+  "data": {
+    "store": "sqlite",
+    "sqlite": {
+      "path": "./focalboard.db"
+    }
+  }
+}
